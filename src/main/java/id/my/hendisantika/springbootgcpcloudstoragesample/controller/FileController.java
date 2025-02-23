@@ -3,6 +3,7 @@ package id.my.hendisantika.springbootgcpcloudstoragesample.controller;
 import id.my.hendisantika.springbootgcpcloudstoragesample.service.FileService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -45,5 +46,13 @@ public class FileController {
         fileService.uploadFile(file);
 
         return ResponseEntity.ok("File uploaded successfully");
+    }
+
+    //Delete file
+    @DeleteMapping("delete")
+    public ResponseEntity<String> deleteFile(@RequestParam String fileName) {
+        fileService.deleteFile(fileName);
+
+        return ResponseEntity.ok(" File deleted successfully");
     }
 }
