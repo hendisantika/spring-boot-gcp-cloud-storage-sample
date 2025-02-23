@@ -5,6 +5,7 @@ import com.google.api.services.storage.Storage;
 import com.google.cloud.storage.Blob;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.io.ByteArrayResource;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -36,5 +37,13 @@ public class FileService {
             list.add(blob.getName());
         }
         return list;
+    }
+
+    public ByteArrayResource downloadFile(String fileName) {
+        Blob blob = storage.get(bucketName, fileName);
+        ByteArrayResource resource = new ByteArrayResource(
+                blob.getContent());
+
+        return resource;
     }
 }
