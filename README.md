@@ -13,3 +13,20 @@
 9. Or you can use Postman to upload the file
 10. Import your Postman Collection: `spring-boot-gcp-cloud-storage-sample.postman_collection.json`
 
+### Image Screenshot
+
+Upload File
+
+![Upload File](img/upload.png "Upload File")
+
+Download File
+
+http://localhost:8080/api/v1/files/download?fileName=accelerator.png
+
+List All Files
+
+![List All Files](img/list.png "List All Files")
+
+GCP Cloud Storage Bucket
+
+![GCP Cloud Storage Bucket](img/gcp.png "GCP Cloud Storage Bucket")
