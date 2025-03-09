@@ -1,0 +1,106 @@
+{
+  "info": {
+    "_postman_id": "37252563-1375-4524-b5e7-eed18621d4da",
+    "name": "Spring Boot GCP Collections",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "276892"
+  },
+  "item": [
+    {
+      "name": "Upload File",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": "Xo0Hkin6l/Gundam1.jpeg"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/files/upload",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "files",
+            "upload"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Files",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Delete File",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/files/delete?fileName=satusehat.webp",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "files",
+            "delete"
+          ],
+          "query": [
+            {
+              "key": "fileName",
+              "value": "satusehat.webp"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Download File",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/files/download?fileName=accelerator.png",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "files",
+            "download"
+          ],
+          "query": [
+            {
+              "key": "fileName",
+              "value": "accelerator.png"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
