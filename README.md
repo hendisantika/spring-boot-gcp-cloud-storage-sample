@@ -1,5 +1,7 @@
 # spring-boot-gcp-cloud-storage-sample
 
+![Google Storage](img/gcpstorage-springboot.png "Google Storage")
+
 ### Things to do list:
 
 1. Clone this repository: `git clone https://github.com/hendisantika/spring-boot-gcp-cloud-storage-sample.git`
